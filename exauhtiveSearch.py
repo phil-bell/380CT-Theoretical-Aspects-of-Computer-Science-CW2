@@ -1,16 +1,15 @@
 class SSP():
-
     def subsetSum(self,list,tot):
 
-        if tot == 0 or tot < 1: #if the total is equal to 0 for less then 1 it ends 
+        if tot == 0 or tot < 1: #if the total is equal to 0 for less then 1 it ends
             return None
         elif len(list) == 0: #if the list is empty it ends
             return None
-        else: #when passed the checks above 
+        else: #when passed the checks above
             if list[0] == tot: #if the first item in the list is the desired total it returns it
                 return [list[0]]
             else:
-                search = instance.subsetSum(list[1:],(tot - list[0])) #sets search to an instance of subsetSum where the current start of the list is removed and the total has the current first item removed from it
+                search = instance.subsetSum(list[1:], (tot - list[0])) #sets search to an instance of subsetSum where the current start of the list is removed and the total has the current first item removed from it
                 if search: #if search isnt empty
                     return [list[0]] + search #returns current first item in the list plus the current value of search
                 else: #if search is empty
