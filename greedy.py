@@ -15,8 +15,7 @@ def quicksort(listToSort):
     else:
         return listToSort 
         
-def greSubsetSum(listToSort,tot):
-    sortedList = quicksort(listToSort)
+def greSubsetSum(sortedList,tot):
     print("Sorted List: ",sortedList)
     current = 0
     used = []
@@ -36,5 +35,6 @@ listToSend = [1,2,3,4,5,6,7,8]
 totalToSend = 12
 print("Set: ", listToSend) #prints out set
 print("Total: ", totalToSend) #prints total
-out = greSubsetSum(listToSend, totalToSend) #calls the dynSubsetSum method and hads the set and the total
+sortedList = quicksort(listToSend) #
+out = greSubsetSum(sortedList, totalToSend) #calls the dynSubsetSum method and hads the set and the total
 print("Results: ", out) #prints out the values that sum to the total      
